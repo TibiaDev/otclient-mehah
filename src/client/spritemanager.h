@@ -52,6 +52,8 @@ private:
     {
         FileStreamPtr file;
         std::mutex mutex;
+
+        FileStream_m(FileStreamPtr f) : file(std::move(f)) {}
     };
 
     void load();
